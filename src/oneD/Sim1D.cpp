@@ -427,7 +427,7 @@ void Sim1D::solve(int loglevel, bool refine_grid)
             // Attempt to solve the steady problem
             setSteadyMode();
             newton().setOptions(m_ss_jac_age);
-            debuglog("Attempt Newton solution of steady-state problem...", loglevel);
+            debuglog("Attempt Newton-Bonis solution of steady-state problem...", loglevel);
             int status = newtonSolve(loglevel-1);
 
             if (status == 0) {
