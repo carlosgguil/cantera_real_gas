@@ -105,7 +105,7 @@ void MultiPhase::addPhase(ThermoPhase* p, double moles)
     // water, only one of which should be present if the mixture represents an
     // equilibrium state.
     if (p->nSpecies() > 1) {
-        m_Tmin = std::max(p->minTemp(), m_Tmin);
+	m_Tmin = std::max(p->minTemp(), m_Tmin);
         m_Tmax = std::min(p->maxTemp(), m_Tmax);
     }
 

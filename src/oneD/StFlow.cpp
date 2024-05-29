@@ -62,7 +62,7 @@ StFlow::StFlow(ThermoPhase* ph, size_t nsp, size_t points) :
     //-------------- default solution bounds --------------------
     setBounds(c_offset_U, -1e20, 1e20); // no bounds on u
     setBounds(c_offset_V, -1e20, 1e20); // V
-    setBounds(c_offset_T, 200.0, 2*m_thermo->maxTemp()); // temperature bounds
+    setBounds(c_offset_T, 100.0, 2*m_thermo->maxTemp()); // temperature bounds, T=200 LIMIT HERE
     setBounds(c_offset_L, -1e20, 1e20); // lambda should be negative
     setBounds(c_offset_E, -1e20, 1e20); // no bounds for inactive component
 

@@ -73,6 +73,7 @@ double Substance::cv()
     }
     double s2 = s();
 
+
     set_T(Tsave);
     return T*(s2 - s1)/(T2-T1);
 }
@@ -124,6 +125,7 @@ double Substance::cp()
         Set(PropertyPair::TP, T2, p0);
         s2 = s();
     }
+
 
     Set(PropertyPair::TV, Tsave, 1.0 / RhoSave);
     return T * (s2 - s1) / (T2 - T1);
@@ -178,6 +180,7 @@ double Substance::thermalExpansionCoeff()
         v2 = v();
     }
 
+
     Set(PropertyPair::TV, Tsave, 1.0 / RhoSave);
     return 2.0 * (v2 - v1) / ((v2 + v1) * (T2 - T1));
 }
@@ -225,6 +228,7 @@ double Substance::isothermalCompressibility()
         }
         v2 = v();
     }
+
 
     Set(PropertyPair::TV, T, 1.0 / RhoSave);
     return -(v2 - v1) / (v0 * (P2 - P1));
@@ -317,6 +321,7 @@ double Substance::Tsat(double p)
         }
     }
     double tsat = T;
+
     T = Tsave;
     return tsat;
 }

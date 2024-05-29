@@ -420,6 +420,7 @@ int ChemEquil::equilibrate(ThermoPhase& s, const char* XYstr,
             tmax = tminPhase + 20;
         }
 
+
         double slope, phigh, plow, pval, dt;
 
         // first get the property values at the upper and lower temperature
@@ -479,6 +480,7 @@ int ChemEquil::equilibrate(ThermoPhase& s, const char* XYstr,
             }
             s.setTemperature(t0);
         }
+
     }
 
     setInitialMoles(s, elMolesGoal,loglevel);
